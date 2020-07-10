@@ -72,7 +72,9 @@ Twitter를 모니터링하는데 관심이 많다.
 - 해당논문에서는 총 6개의 인코더 층을 사용한다. 
 - 인코더를 하나의 층이라는 개념으로 생각하면 하나의 인코더 층에는 2개의 서브 층이 존재한다. 
 - 먼저 멀티 헤드 셀프 어텐션은 어텐션을 병렬적으로 사용했다는 의미이고, FFNN은 일반적인 feedfoward의 모양이다. 
+
 ***1) 인코더의 멀티-헤드 어텐션***
+
 - 어텐션함수는 주어진 Query에 대해서 모든 key와의 유사도를 각각 구하여 이 유사도를 가중치로 하여 키와 매핑되어 있는 
 각각의 value에 반영해준다. 그리고 유사도가 반영된 값을 모두 가중합하여 리턴한다. 
 - 예를들어 input 값으로 <The animal didn't cross the street because it was too tired.>에서 it이 의미하는 바를 문장 내 단어끼리의 유사도를 구함으로서 
@@ -83,9 +85,13 @@ Twitter를 모니터링하는데 관심이 많다.
 ![image](https://user-images.githubusercontent.com/49298791/87007188-d3f21b00-c1fc-11ea-8dd1-27257550da8e.png)
 - 기본적으로 한번의 어텐션을 하는 것보다 여러번의 어텐션을 병렬로 처리하는 것이 더 효과적이므로 d_model을 num-head개로 나누어
 d_model / num_heads의 차원을 가지는 Q,K,V에 대하여 num-heads개의 병렬 어텐션을 수행한다. 
+
 ***2) position -wise FFNN***
+
 - multi-head self attention의 결과로 나온 각 값을 FFNN을 정하여 output값을 얻는 작업을 말한다. 
-***3) residual connection & layer normalization
+
+***3) residual connection & layer normalization***
+
 - 잔차연결 참고논문 : https://arxiv.org/pdf/1607.06450.pdf
 - 층 정규화 참고논문 : https://arxiv.org/pdf/1607.06450.pdf
 
