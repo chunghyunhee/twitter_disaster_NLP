@@ -23,9 +23,6 @@ Twitter를 모니터링하는데 관심이 많다.
 - no dense layer, simply add a sigmoid output directly
 - fixed parameters
 
-**(3) tweeter_disaster_3.ipynb**
-- SOTA  논문읽고 구현
-- SOTA 적용해봄  
 
 --------------------------------------------------------------------------
 
@@ -108,6 +105,7 @@ d_model / num_heads의 차원을 가지는 Q,K,V에 대하여 num-heads개의 �
 ### 5.  BERT(이외에 Open AI, ELMo보다 좀더 발전된 형태의 모델이다)
 - 논문 : https://arxiv.org/pdf/1810.04805v2.pdf
 - 참고 블로그 : https://mino-park7.github.io/nlp/2018/12/12/bert-%EB%85%BC%EB%AC%B8%EC%A0%95%EB%A6%AC/?fbclid=IwAR3S-8iLWEVG6FGUVxoYdwQyA-zG0GpOUzVEsFBd0ARFg4eFXqCyGLznu7w
+- 해당 논문을 정리한 내용은 BERT.pdf로 저장함. 
 - 대용량의 unlabled로 모델을 미리 학습시킨 후, 특정 task를 가진 labled data로 
 transfer learning을 하는 모델
 - OpenAI GPT나 ELMo의 경우는 대용량 unlabled corpus를 통해 language model을 
@@ -127,6 +125,5 @@ BERT에서는 input전체와 mask된 token을 한번에 transformer encoder에 �
 (2) next sentence prediction : 두 문장을 pre-training시에 같이 넣어 두 문장이 이어지는 문장인지
 아닌지를 맞추는 것이다. 
  
-### 6. SOTA
-- 논문 : https://arxiv.org/pdf/1901.11504.pdf
+
 
