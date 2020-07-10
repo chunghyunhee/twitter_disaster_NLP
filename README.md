@@ -9,16 +9,21 @@ Twitter를 모니터링하는데 관심이 많다.
 
 --------------------------------------------------------------------------
 
-(1) tweeter_disaster_baseline.ipynb
+**(1) tweeter_disaster_baseline.ipynb**
 - txt 데이터를 counter vectorize화 하여 분석하고자함
 - Ridge Classifier, xgboost + tuning  classify
 
-(2) tweeter_disaster_2.ipynb
+**(2) tweeter_disaster_2.ipynb**
 - BERT ( https://arxiv.org/abs/1810.04805) 논문 읽고 구현
-- BERT 적용해봄
-- 추가 data cleaning 
+- using model named BERT
+- Load BERT from the tensorlow hub
+- load tokenizer from the bert layer
+- encode the txt into tokens, masks, and segment flags
+- no pooling, directly use the CLS embedding. 
+- no dense layer, simply add a sigmoid output directly
+- fixed parameters
 
-(3) tweeter_disaster_3.ipynb
+**(3) tweeter_disaster_3.ipynb**
 - SOTA  논문읽고 구현
 - SOTA 적용해봄  
 
