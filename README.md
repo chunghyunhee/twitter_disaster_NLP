@@ -10,6 +10,8 @@ Twitter를 모니터링하는데 관심이 많다.
 --------------------------------------------------------------------------
 ## model
 - 특히 custumizing한 부분에 중점되어 설명
+- 각 layer가 어떤 의미를 가지고 어떻게 변형했는지에 중점을 맞출 것
+- feature은 자의적으로 바꾸지 말고 PCA와 같은 변수 선택할 수 있는 method를 사용할 것 
 
 **(1) tweeter_disaster_baseline.ipynb**
 - txt 데이터를 counter vectorize화 하여 분석하고자함
