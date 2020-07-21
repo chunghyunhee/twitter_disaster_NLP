@@ -8,6 +8,8 @@ Twitter를 모니터링하는데 관심이 많다.
 - 실제 재난에 대한 트윗과 그렇지 않은 트윗을 예측하는 기계 학슴 모델을 구축하고자 한다. 
 
 --------------------------------------------------------------------------
+## model
+- 특히 custumizing한 부분에 중점되어 설명
 
 **(1) tweeter_disaster_baseline.ipynb**
 - txt 데이터를 counter vectorize화 하여 분석하고자함
@@ -19,8 +21,8 @@ Twitter를 모니터링하는데 관심이 많다.
 - Load BERT from the tensorlow hub
 - load tokenizer from the bert layer
 - encode the txt into tokens, masks, and segment flags
-- no pooling, directly use the CLS embedding. 
-- no dense layer, simply add a sigmoid output directly
+- **no pooling, directly use the CLS embedding.** 
+- **no dense layer, simply add a sigmoid output directly**
 - fixed parameters
 
 
